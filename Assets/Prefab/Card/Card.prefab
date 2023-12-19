@@ -306,6 +306,9 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
+  ownerNetID: 0
+  isOwned: 0
+  lastPlayerIdentity: {fileID: 0}
 --- !u!114 &232755232
 MonoBehaviour:
   m_ObjectHideFlags: 0

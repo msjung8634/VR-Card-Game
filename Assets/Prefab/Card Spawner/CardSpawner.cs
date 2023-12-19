@@ -7,7 +7,8 @@ public class CardSpawner : NetworkBehaviour
 {
     public GameObject cardPrefab;
 
-    public int spawnCount = 0;
+    public int maxSpawnCount = 50;
+    public int currentSpawnCount = 0;
 
     public override void OnStartServer()
     {
@@ -18,10 +19,10 @@ public class CardSpawner : NetworkBehaviour
 
     private IEnumerator GenerateCards()
     {
-        while (spawnCount < 50)
+        while (currentSpawnCount < maxSpawnCount)
         {
             yield return new WaitForSeconds(3f);
-            spawnCount++;
+            currentSpawnCount++;
 
             GameObject card = Instantiate(cardPrefab, transform.position, transform.rotation);
             NetworkServer.Spawn(card);
