@@ -999,6 +999,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326363191}
   - component: {fileID: 8265716493313303831}
+  - component: {fileID: 4774175515286309333}
   m_Layer: 0
   m_Name: coll_hands:b_r_hand
   m_TagString: Untagged
@@ -1034,6 +1035,22 @@ CapsuleCollider:
   m_Height: 0.06
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &4774175515286309333
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493325992151}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &8265716493325995743
 GameObject:
   m_ObjectHideFlags: 0
@@ -1044,6 +1061,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326479107}
   - component: {fileID: 8265716493314548607}
+  - component: {fileID: 7501042865414025212}
   m_Layer: 0
   m_Name: coll_hands:b_r_hand
   m_TagString: Untagged
@@ -1079,6 +1097,22 @@ CapsuleCollider:
   m_Height: 0.05
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &7501042865414025212
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493325995743}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &8265716493326000473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,6 +1123,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326358257}
   - component: {fileID: 8265716493313296453}
+  - component: {fileID: 4578785740953078753}
   m_Layer: 0
   m_Name: hands_coll:b_r_index1
   m_TagString: Untagged
@@ -1124,6 +1159,22 @@ CapsuleCollider:
   m_Height: 0.025
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &4578785740953078753
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326000473}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &8265716493326002041
 GameObject:
   m_ObjectHideFlags: 0
@@ -1134,6 +1185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326464261}
   - component: {fileID: 8265716493313281443}
+  - component: {fileID: 4523410389692984611}
   m_Layer: 0
   m_Name: coll_hands:b_r_hand
   m_TagString: Untagged
@@ -1169,6 +1221,22 @@ CapsuleCollider:
   m_Height: 0.05
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &4523410389692984611
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326002041}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &8265716493326002107
 GameObject:
   m_ObjectHideFlags: 0
@@ -1179,6 +1247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326449869}
   - component: {fileID: 8265716493313287731}
+  - component: {fileID: 862269671385464107}
   m_Layer: 0
   m_Name: hands_coll:b_r_ring1
   m_TagString: Untagged
@@ -1214,6 +1283,22 @@ CapsuleCollider:
   m_Height: 0.05
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &862269671385464107
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326002107}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &8265716493326004985
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,6 +1309,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326463813}
   - component: {fileID: 8265716493314490395}
+  - component: {fileID: 7379249215455724480}
   m_Layer: 0
   m_Name: hands_coll:b_r_pinky2
   m_TagString: Untagged
@@ -1259,6 +1345,22 @@ CapsuleCollider:
   m_Height: 0.035
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &7379249215455724480
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326004985}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &8265716493326005151
 GameObject:
   m_ObjectHideFlags: 0
@@ -1269,6 +1371,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326372211}
   - component: {fileID: 8265716493314539343}
+  - component: {fileID: 4342215662644158537}
   m_Layer: 0
   m_Name: coll_hands:b_r_hand
   m_TagString: Untagged
@@ -1304,6 +1407,22 @@ CapsuleCollider:
   m_Height: 0.11
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &4342215662644158537
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326005151}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &8265716493326111655
 GameObject:
   m_ObjectHideFlags: 0
@@ -1314,6 +1433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326445441}
   - component: {fileID: 8265716493314539125}
+  - component: {fileID: 1144230860241209737}
   m_Layer: 0
   m_Name: hands_coll:b_r_index2
   m_TagString: Untagged
@@ -1349,6 +1469,22 @@ CapsuleCollider:
   m_Height: 0.035
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1144230860241209737
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326111655}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &8265716493326113697
 GameObject:
   m_ObjectHideFlags: 0
@@ -1359,6 +1495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326482737}
   - component: {fileID: 8265716493314446855}
+  - component: {fileID: 675502123770318143}
   m_Layer: 0
   m_Name: hands_coll:b_r_pinky1
   m_TagString: Untagged
@@ -1394,6 +1531,22 @@ CapsuleCollider:
   m_Height: 0.05
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &675502123770318143
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326113697}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &8265716493326114565
 GameObject:
   m_ObjectHideFlags: 0
@@ -1404,6 +1557,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326373191}
   - component: {fileID: 8265716493314551409}
+  - component: {fileID: 3372190088585517962}
   m_Layer: 0
   m_Name: coll_hands:b_r_hand
   m_TagString: Untagged
@@ -1439,6 +1593,22 @@ CapsuleCollider:
   m_Height: 0.11
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &3372190088585517962
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326114565}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &8265716493326167451
 GameObject:
   m_ObjectHideFlags: 0
@@ -1449,6 +1619,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326428681}
   - component: {fileID: 8265716493314500183}
+  - component: {fileID: 1342931360722834340}
   m_Layer: 0
   m_Name: coll_hands:b_r_hand
   m_TagString: Untagged
@@ -1484,6 +1655,22 @@ CapsuleCollider:
   m_Height: 0.07
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1342931360722834340
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326167451}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &8265716493326169667
 GameObject:
   m_ObjectHideFlags: 0
@@ -1494,6 +1681,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326424359}
   - component: {fileID: 8265716493314517757}
+  - component: {fileID: 3464490011788633139}
   m_Layer: 0
   m_Name: hands_coll:b_r_index3
   m_TagString: Untagged
@@ -1529,6 +1717,22 @@ CapsuleCollider:
   m_Height: 0.05
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &3464490011788633139
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326169667}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &8265716493326185271
 GameObject:
   m_ObjectHideFlags: 0
@@ -1538,8 +1742,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8265716493326425525}
-  - component: {fileID: 8265716493323058707}
   - component: {fileID: 8265716493314519121}
+  - component: {fileID: 6101010927967019287}
   m_Layer: 0
   m_Name: hands_coll:b_r_pinky3
   m_TagString: Untagged
@@ -1561,22 +1765,6 @@ Transform:
   m_Father: {fileID: 8260938129705609237}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -2.602, y: -87.464, z: -150.427}
---- !u!54 &8265716493323058707
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8265716493326185271}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!136 &8265716493314519121
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1591,6 +1779,22 @@ CapsuleCollider:
   m_Height: 0.025
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &6101010927967019287
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326185271}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &8265716493326187217
 GameObject:
   m_ObjectHideFlags: 0
@@ -1601,6 +1805,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326423309}
   - component: {fileID: 8265716493314552305}
+  - component: {fileID: 2781324933992312873}
   m_Layer: 0
   m_Name: coll_hands:b_r_thumb3
   m_TagString: Untagged
@@ -1636,6 +1841,22 @@ CapsuleCollider:
   m_Height: 0.025
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &2781324933992312873
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326187217}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &8265716493326189569
 GameObject:
   m_ObjectHideFlags: 0
@@ -1646,6 +1867,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326457327}
   - component: {fileID: 8265716493314502123}
+  - component: {fileID: 2570695433482225012}
   m_Layer: 0
   m_Name: coll_hands:b_r_hand
   m_TagString: Untagged
@@ -1681,6 +1903,22 @@ CapsuleCollider:
   m_Height: 0.07
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &2570695433482225012
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326189569}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &8265716493326192311
 GameObject:
   m_ObjectHideFlags: 0
@@ -1691,6 +1929,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326355561}
   - component: {fileID: 8265716493314538029}
+  - component: {fileID: 2302784872429844368}
   m_Layer: 0
   m_Name: hands_coll:b_r_ring3
   m_TagString: Untagged
@@ -1726,6 +1965,22 @@ CapsuleCollider:
   m_Height: 0.025
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &2302784872429844368
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326192311}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &8265716493326194883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1736,6 +1991,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326478613}
   - component: {fileID: 8265716493314508211}
+  - component: {fileID: 4555660563133417610}
   m_Layer: 0
   m_Name: hands_coll:b_r_middle3
   m_TagString: Untagged
@@ -1771,6 +2027,22 @@ CapsuleCollider:
   m_Height: 0.025
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &4555660563133417610
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326194883}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &8265716493326196035
 GameObject:
   m_ObjectHideFlags: 0
@@ -1781,6 +2053,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326473789}
   - component: {fileID: 8265716493314543325}
+  - component: {fileID: 5319958331343568370}
   m_Layer: 0
   m_Name: hands_coll:b_r_middle2
   m_TagString: Untagged
@@ -1816,6 +2089,22 @@ CapsuleCollider:
   m_Height: 0.035
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &5319958331343568370
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326196035}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &8265716493326203505
 GameObject:
   m_ObjectHideFlags: 0
@@ -1826,6 +2115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326419245}
   - component: {fileID: 8265716493314519251}
+  - component: {fileID: 8342100621066515256}
   m_Layer: 0
   m_Name: coll_hands:b_r_thumb1
   m_TagString: Untagged
@@ -1861,6 +2151,22 @@ CapsuleCollider:
   m_Height: 0.05
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &8342100621066515256
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326203505}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &8265716493326206453
 GameObject:
   m_ObjectHideFlags: 0
@@ -1871,6 +2177,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326459531}
   - component: {fileID: 8265716493314538413}
+  - component: {fileID: 2875070760088666349}
   m_Layer: 0
   m_Name: coll_hands:b_r_thumb2
   m_TagString: Untagged
@@ -1906,6 +2213,22 @@ CapsuleCollider:
   m_Height: 0.035
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &2875070760088666349
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326206453}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &8265716493326207357
 GameObject:
   m_ObjectHideFlags: 0
@@ -1916,6 +2239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326482083}
   - component: {fileID: 8265716493313290855}
+  - component: {fileID: 573574505287098389}
   m_Layer: 0
   m_Name: hands_coll:b_r_middle1
   m_TagString: Untagged
@@ -1951,6 +2275,22 @@ CapsuleCollider:
   m_Height: 0.05
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &573574505287098389
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326207357}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &8265716493326209157
 GameObject:
   m_ObjectHideFlags: 0
@@ -1961,6 +2301,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326420667}
   - component: {fileID: 8265716493314531977}
+  - component: {fileID: 6986861449506296101}
   m_Layer: 0
   m_Name: hands_coll:b_r_pinky0
   m_TagString: Untagged
@@ -1996,6 +2337,22 @@ CapsuleCollider:
   m_Height: 0.05
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &6986861449506296101
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326209157}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &8265716493326212317
 GameObject:
   m_ObjectHideFlags: 0
@@ -2006,6 +2363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326381715}
   - component: {fileID: 8265716493314492023}
+  - component: {fileID: 1263272941793108809}
   m_Layer: 0
   m_Name: coll_hands:b_r_hand
   m_TagString: Untagged
@@ -2041,6 +2399,22 @@ CapsuleCollider:
   m_Height: 0.11
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1263272941793108809
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326212317}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &8265716493326220207
 GameObject:
   m_ObjectHideFlags: 0
@@ -2051,6 +2425,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326453835}
   - component: {fileID: 8265716493313297665}
+  - component: {fileID: 6484367708415688880}
   m_Layer: 0
   m_Name: hands_coll:b_r_ring2
   m_TagString: Untagged
@@ -2086,3 +2461,19 @@ CapsuleCollider:
   m_Height: 0.035
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &6484367708415688880
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326220207}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
