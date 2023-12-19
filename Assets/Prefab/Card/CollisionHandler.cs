@@ -27,13 +27,13 @@ public class CollisionHandler : NetworkBehaviour
         }
     }
 
-    [Server]
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            cardIdentity.RemoveClientAuthority();
-            Debug.Log($"권한해제 : {lastPlayerIdentity.netId}");
-        }
-    }
+    //[Server]
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if (other.gameObject.CompareTag("Player"))
+    //    {
+    //        cardIdentity.RemoveClientAuthority();
+    //        Debug.Log($"권한해제 : {lastPlayerIdentity.netId}");
+    //    }
+    //}
 }

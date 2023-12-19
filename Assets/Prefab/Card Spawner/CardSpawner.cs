@@ -18,7 +18,7 @@ public class CardSpawner : NetworkBehaviour
 
     private IEnumerator GenerateCards()
     {
-        while (spawnCount < 5)
+        while (spawnCount < 50)
         {
             yield return new WaitForSeconds(3f);
             spawnCount++;
