@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 619c8293f865e3e4bb44226b5e43a1ee, type: 2}
+  - {fileID: 2100000, guid: 2d3ed79ac91b3364e94a6256e7bb1bb3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -101,6 +101,7 @@ MonoBehaviour:
   syncInterval: 0
   isStopped: 0
   spawnerMesh: {fileID: 109357448154621693}
+  isRed: 0
   cardPrefab: {fileID: 4554561294953304353, guid: d6500433213f5784ab5e80f18b01010c, type: 3}
   red: {fileID: 2100000, guid: 2ed2fad9913ca394ca722ba4f4858e2b, type: 2}
   blue: {fileID: 2100000, guid: 2d3ed79ac91b3364e94a6256e7bb1bb3, type: 2}
@@ -125,7 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 0
   _assetId: 584866023
-  serverOnly: 1
+  serverOnly: 0
   visible: 2
   hasSpawned: 0
 --- !u!114 &109357448154621695

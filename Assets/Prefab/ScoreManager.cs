@@ -20,15 +20,40 @@ public class ScoreManager : NetworkBehaviour
 
     private void ChangeRedCountUI(uint _, uint newCount)
     {
-        OnRedCountChanged?.Invoke();
+        if (OnRedCountChanged != null)
+		{
+            ChangeRedCountUI();
+            Debug.Log("[ScoreManager] RedCountChanged");
+        }
+		else
+		{
+            Debug.Log("[ScoreManager] RedCountChanged is null");
+        }
     }
+
+    private void ChangeRedCountUI()
+	{
+        OnRedCountChanged?.Invoke();
+	}
 
     private void ChangeBlueCountUI(uint _, uint newCount)
     {
+        if (OnBlueCountChanged != null)
+		{
+            ChangeBlueCountUI();
+            Debug.Log("[ScoreManager] BlueCountChanged");
+        }
+		else
+		{
+            Debug.Log("[ScoreManager] BlueCountChanged is null");
+        }
+    }
+
+    private void ChangeBlueCountUI()
+	{
         OnBlueCountChanged?.Invoke();
     }
 
-    [Server]
     private void Update()
     {
         var cards = FindObjectsOfType<ColorController>();

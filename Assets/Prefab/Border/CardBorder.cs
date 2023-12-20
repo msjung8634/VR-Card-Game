@@ -7,7 +7,7 @@ public class CardBorder : NetworkBehaviour
 {
     public CardSpawner cardSpawner;
 
-    [Server]
+    [ServerCallback]
     private void OnTriggerEnter(Collider other)
     {
         // 카드와 충돌하면

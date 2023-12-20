@@ -9,6 +9,14 @@ public class CardSpawner : NetworkBehaviour
 
     public MeshRenderer spawnerMesh;
 
+    [SyncVar(hook = "ChangeMaterial")]
+    public bool isRed = false;
+
+    private void ChangeMaterial(bool _, bool newFlag)
+	{
+        spawnerMesh.material = isRed ? red : blue;
+	}
+
     public GameObject cardPrefab;
     public Material red;
     public Material blue;
@@ -27,17 +35,18 @@ public class CardSpawner : NetworkBehaviour
     {
         base.OnStartServer();
 
-        spawnerMesh.material = blue;
+        isRed = false;
+
         StartSpawn();
     }
 
-    private void Start()
+	private void Start()
     {
         tableRadius = roundTable.localScale.x / 2;
         targetPos = transform.position;
     }
 
-    [Server]
+    [ServerCallback]
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
@@ -82,7 +91,8 @@ public class CardSpawner : NetworkBehaviour
             yield return new WaitForSeconds(spawnInterval);
             currentSpawnCount++;
 
-            spawnerMesh.material = currentSpawnCount % 2 == 0 ? blue : red;
+            isRed = currentSpawnCount % 2 == 0 ? false : true;
+
             Quaternion rotation = currentSpawnCount % 2 == 0 ? Quaternion.Euler(0, 0, 0) : Quaternion.Euler(180, 0, 0);
             GameObject card = Instantiate(cardPrefab, transform.position, rotation);
 
