@@ -7,7 +7,11 @@ public class CardSpawner : NetworkBehaviour
 {
     public bool isStopped = false;
 
+    public MeshRenderer spawnerMesh;
+
     public GameObject cardPrefab;
+    public Material red;
+    public Material blue;
 
     public Transform roundTable;
     float tableRadius;
@@ -23,6 +27,7 @@ public class CardSpawner : NetworkBehaviour
     {
         base.OnStartServer();
 
+        spawnerMesh.material = blue;
         StartSpawn();
     }
 
@@ -77,6 +82,7 @@ public class CardSpawner : NetworkBehaviour
             yield return new WaitForSeconds(spawnInterval);
             currentSpawnCount++;
 
+            spawnerMesh.material = currentSpawnCount % 2 == 0 ? blue : red;
             Quaternion rotation = currentSpawnCount % 2 == 0 ? Quaternion.Euler(0, 0, 0) : Quaternion.Euler(180, 0, 0);
             GameObject card = Instantiate(cardPrefab, transform.position, rotation);
 
@@ -92,5 +98,10 @@ public class CardSpawner : NetworkBehaviour
         }
 
         isStopped = true;
+    }
+
+    public void StopSpawn()
+    {
+        StopAllCoroutines();
     }
 }

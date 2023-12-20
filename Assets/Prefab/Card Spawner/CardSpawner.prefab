@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 109357448154621667}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 12, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -100,7 +100,10 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0
   isStopped: 0
+  spawnerMesh: {fileID: 109357448154621693}
   cardPrefab: {fileID: 4554561294953304353, guid: d6500433213f5784ab5e80f18b01010c, type: 3}
+  red: {fileID: 2100000, guid: 2ed2fad9913ca394ca722ba4f4858e2b, type: 2}
+  blue: {fileID: 2100000, guid: 2d3ed79ac91b3364e94a6256e7bb1bb3, type: 2}
   roundTable: {fileID: 0}
   targetPos: {x: 0, y: 0, z: 0}
   distanceThreshold: 1
@@ -121,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneId: 0
-  _assetId: 0
+  _assetId: 584866023
   serverOnly: 1
   visible: 2
   hasSpawned: 0

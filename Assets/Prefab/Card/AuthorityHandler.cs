@@ -24,7 +24,7 @@ public class AuthorityHandler : NetworkBehaviour
     [Server]
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.transform.root.CompareTag("Player"))
         {
             lastPlayerIdentity = other.gameObject.transform.root.GetComponent<NetworkIdentity>();
 

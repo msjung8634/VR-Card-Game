@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-public class CardHandler : NetworkBehaviour
+public class CardBorder : NetworkBehaviour
 {
     public CardSpawner cardSpawner;
 
@@ -15,7 +15,7 @@ public class CardHandler : NetworkBehaviour
         {
             Destroy(other.gameObject);
             cardSpawner.maxSpawnCount++;
-            Debug.Log($"[Spawner] {cardSpawner.currentSpawnCount}/{cardSpawner.maxSpawnCount}");
+            Debug.Log($"[Border] {cardSpawner.currentSpawnCount}/{cardSpawner.maxSpawnCount}");
 
             if (cardSpawner.isStopped)
             {
