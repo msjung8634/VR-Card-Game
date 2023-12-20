@@ -5,10 +5,14 @@ using Mirror;
 
 public class AuthorityHandler : NetworkBehaviour
 {
+    [SyncVar]
     public uint ownerNetID = uint.MaxValue;
+    [SyncVar]
     public bool owned = false;
-
+    
     NetworkIdentity cardIdentity;
+    
+    [SyncVar]
     public NetworkIdentity lastPlayerIdentity;
 
 	public override void OnStartServer()
@@ -23,6 +27,9 @@ public class AuthorityHandler : NetworkBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             lastPlayerIdentity = other.gameObject.transform.root.GetComponent<NetworkIdentity>();
+
+            // 이미 권한을 가진 경우
+            if (cardIdentity.connectionToClient.Equals(lastPlayerIdentity.connectionToClient)) return;
 
             if (owned)
             {
@@ -41,7 +48,10 @@ public class AuthorityHandler : NetworkBehaviour
 		{
             var cardIdentity = other.gameObject.GetComponent<NetworkIdentity>();
             var authorityHandler = other.gameObject.GetComponent<AuthorityHandler>();
-            cardIdentity.RemoveClientAuthority();
+
+            if (authorityHandler.owned)
+                cardIdentity.RemoveClientAuthority();
+
             if (cardIdentity.AssignClientAuthority(lastPlayerIdentity.connectionToClient))
 			{
                 authorityHandler.ownerNetID = ownerNetID;
