@@ -17,7 +17,8 @@ public class CardSpawner : NetworkBehaviour
         spawnerMesh.material = isRed ? red : blue;
 	}
 
-    public GameObject cardPrefab;
+    public GameObject redCardPrefab;
+    public GameObject blueCardPrefab;
     public Material red;
     public Material blue;
 
@@ -93,16 +94,9 @@ public class CardSpawner : NetworkBehaviour
 
             isRed = currentSpawnCount % 2 == 0 ? false : true;
 
-            Quaternion rotation = currentSpawnCount % 2 == 0 ? Quaternion.Euler(0, 0, 0) : Quaternion.Euler(180, 0, 0);
-            GameObject card = Instantiate(cardPrefab, transform.position, rotation);
-
-            NetworkServer.Spawn(card, NetworkServer.connections[0]);
-
-            AuthorityHandler cardAuthority = card.GetComponent<AuthorityHandler>();
-            cardAuthority.owned = true;
-            cardAuthority.ownerNetID = NetworkServer.connections[0].identity.netId;
-            cardAuthority.lastPlayerIdentity = NetworkServer.connections[0].identity;
-            Debug.Log($"[Spawn] {card.name} Authority -> NetID:{NetworkServer.connections[0].identity.netId:#00}");
+            var cardObj = isRed ? redCardPrefab : blueCardPrefab;
+            GameObject card = Instantiate(cardObj, transform.position, cardObj.transform.rotation);
+            NetworkServer.Spawn(card);
 
             yield return null;
         }

@@ -3725,6 +3725,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7462684099648362491}
   - component: {fileID: 7462684099648362484}
+  - component: {fileID: 4785493192924200755}
   - component: {fileID: 8348687724289717280}
   - component: {fileID: 4422720531797690295}
   - component: {fileID: 4137616886691398528}
@@ -3772,6 +3773,22 @@ MonoBehaviour:
   networkHead: {fileID: 7462684099259211996}
   networkLeftHand: {fileID: 5569491665421885080}
   networkRightHand: {fileID: 7093431475489083033}
+--- !u!114 &4785493192924200755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7462684099648362490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da8432c65dfb53d4a946e0fc31aee486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
+  networkCanvas: {fileID: 2594513207375971392, guid: c44d0b2caa1ff684c8b0308e1bf32504, type: 3}
 --- !u!114 &8348687724289717280
 MonoBehaviour:
   m_ObjectHideFlags: 0

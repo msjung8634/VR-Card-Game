@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Mirror;
 
 public enum ScoreType {
     None = 0,
@@ -12,8 +13,6 @@ public enum ScoreType {
 public class UIOnScoreChanged : MonoBehaviour
 {
     RectTransform rectTransform;
-    ScoreManager scoreManager;
-    public ScoreType scoreType = ScoreType.None;
     Vector3 originPos;
 
     [Header("Move Back And Forth")]
@@ -24,32 +23,12 @@ public class UIOnScoreChanged : MonoBehaviour
     private void Awake()
     {
         TryGetComponent(out rectTransform);
-        scoreManager = FindObjectOfType<ScoreManager>();
     }
 
     private void Start()
     {
         originPos = rectTransform.anchoredPosition3D;
     }
-
-    private void OnEnable()
-    {
-        if (scoreType == ScoreType.Red)
-            scoreManager.OnRedCountChanged += MoveText;
-
-        if (scoreType == ScoreType.Blue)
-            scoreManager.OnBlueCountChanged += MoveText;
-    }
-
-    private void OnDisable()
-    {
-        if (scoreType == ScoreType.Red)
-            scoreManager.OnRedCountChanged -= MoveText;
-
-        if (scoreType == ScoreType.Blue)
-            scoreManager.OnBlueCountChanged -= MoveText;
-    }
-
     
     private IEnumerator lastMove = null;
     public void MoveText()

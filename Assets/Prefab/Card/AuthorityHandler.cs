@@ -24,41 +24,41 @@ public class AuthorityHandler : NetworkBehaviour
     [Server]
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.transform.root.CompareTag("Player"))
-        {
-            lastPlayerIdentity = other.gameObject.transform.root.GetComponent<NetworkIdentity>();
+  //      if (other.gameObject.transform.root.CompareTag("Player"))
+  //      {
+  //          lastPlayerIdentity = other.gameObject.transform.root.GetComponent<NetworkIdentity>();
 
-            // 이미 권한을 가진 경우
-            if (cardIdentity.connectionToClient.Equals(lastPlayerIdentity.connectionToClient)) return;
+  //          // 이미 권한을 가진 경우
+  //          if (cardIdentity.connectionToClient.Equals(lastPlayerIdentity.connectionToClient)) return;
 
-            if (owned)
-            {
-                cardIdentity.RemoveClientAuthority();
-                owned = false;
-            }
+  //          if (owned)
+  //          {
+  //              cardIdentity.RemoveClientAuthority();
+  //              owned = false;
+  //          }
 
-            if (cardIdentity.AssignClientAuthority(lastPlayerIdentity.connectionToClient))
-			{
-                owned = true;
-                ownerNetID = lastPlayerIdentity.netId;
-                Debug.Log($"[By Player] {gameObject.name} Authority -> NetID:{lastPlayerIdentity.netId:#00}");
-            }
-        }
-        else if (other.gameObject.layer == LayerMask.NameToLayer("Card"))
-		{
-            var cardIdentity = other.gameObject.GetComponent<NetworkIdentity>();
-            var authorityHandler = other.gameObject.GetComponent<AuthorityHandler>();
+  //          if (cardIdentity.AssignClientAuthority(lastPlayerIdentity.connectionToClient))
+		//	{
+  //              owned = true;
+  //              ownerNetID = lastPlayerIdentity.netId;
+  //              Debug.Log($"[By Player] {gameObject.name} Authority -> NetID:{lastPlayerIdentity.netId:#00}");
+  //          }
+  //      }
+  //      else if (other.gameObject.layer == LayerMask.NameToLayer("Card"))
+		//{
+  //          var cardIdentity = other.gameObject.GetComponent<NetworkIdentity>();
+  //          var authorityHandler = other.gameObject.GetComponent<AuthorityHandler>();
 
-            if (authorityHandler.owned)
-                cardIdentity.RemoveClientAuthority();
+  //          if (authorityHandler.owned)
+  //              cardIdentity.RemoveClientAuthority();
 
-            if (cardIdentity.AssignClientAuthority(lastPlayerIdentity.connectionToClient))
-			{
-                authorityHandler.ownerNetID = ownerNetID;
-                authorityHandler.lastPlayerIdentity = lastPlayerIdentity;
-                Debug.Log($"[By Card] {other.gameObject.name} Authority -> NetID:{lastPlayerIdentity.netId:#00}");
-            }
-        }
+  //          if (cardIdentity.AssignClientAuthority(lastPlayerIdentity.connectionToClient))
+		//	{
+  //              authorityHandler.ownerNetID = ownerNetID;
+  //              authorityHandler.lastPlayerIdentity = lastPlayerIdentity;
+  //              Debug.Log($"[By Card] {other.gameObject.name} Authority -> NetID:{lastPlayerIdentity.netId:#00}");
+  //          }
+  //      }
     }
 
     //[Server]

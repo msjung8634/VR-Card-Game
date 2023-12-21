@@ -5,37 +5,51 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-    public TextMeshProUGUI ready;
-    public TextMeshProUGUI start;
-    public TextMeshProUGUI redCount;
-    public TextMeshProUGUI blueCount;
+    public ScoreManager scoreManager;
 
-    ScoreManager scoreManager;
+    public GameObject ready;
+    public GameObject start;
+    public GameObject redCount;
+    public GameObject blueCount;
+
+    TextMeshProUGUI txtRedCountText;
+    TextMeshProUGUI txtBlueCountText;
+
+    Canvas canvas;
 
     private void Awake()
     {
+        TryGetComponent(out canvas);
         scoreManager = FindObjectOfType<ScoreManager>();
+
+        txtRedCountText = redCount.GetComponent<TextMeshProUGUI>();
+        txtBlueCountText = blueCount.GetComponent<TextMeshProUGUI>();
+    }
+
+    private void Start()
+    {
+        canvas.worldCamera = Camera.main;
     }
 
     private void Update()
     {
-        redCount.text = $"{scoreManager.redCount:##}";
-        blueCount.text = $"{scoreManager.blueCount:##}";
+        txtRedCountText.text = $"{scoreManager.redCount:##}";
+        txtBlueCountText.text = $"{scoreManager.blueCount:##}";
     }
 
     public void ShowReady()
     {
-        ready.gameObject.SetActive(true);
+        ready.SetActive(true);
     }
 
     public void ShowStart()
     {
-        start.gameObject.SetActive(true);
+        start.SetActive(true);
     }
 
     public void ShowScore()
     {
-        redCount.gameObject.SetActive(true);
-        blueCount.gameObject.SetActive(true);
+        redCount.SetActive(true);
+        blueCount.SetActive(true);
     }
 }

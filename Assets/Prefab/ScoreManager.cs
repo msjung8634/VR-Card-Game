@@ -12,46 +12,22 @@ public class ScoreManager : NetworkBehaviour
     [SyncVar]
     public uint totalCount = 0;
 
-    [SyncVar(hook = "ChangeRedCountUI")]
+    [SyncVar]
     public uint redCount = 0;
 
-    [SyncVar(hook = "ChangeBlueCountUI")]
+    [SyncVar]
     public uint blueCount = 0;
 
-    private void ChangeRedCountUI(uint _, uint newCount)
+    void ChangeRedCountUI()
     {
-        if (OnRedCountChanged != null)
-		{
-            ChangeRedCountUI();
-            Debug.Log("[ScoreManager] RedCountChanged");
-        }
-		else
-		{
-            Debug.Log("[ScoreManager] RedCountChanged is null");
-        }
-    }
-
-    private void ChangeRedCountUI()
-	{
         OnRedCountChanged?.Invoke();
-	}
-
-    private void ChangeBlueCountUI(uint _, uint newCount)
-    {
-        if (OnBlueCountChanged != null)
-		{
-            ChangeBlueCountUI();
-            Debug.Log("[ScoreManager] BlueCountChanged");
-        }
-		else
-		{
-            Debug.Log("[ScoreManager] BlueCountChanged is null");
-        }
+        Debug.Log("RedCount Changed");
     }
 
-    private void ChangeBlueCountUI()
-	{
+    void ChangeBlueCountUI()
+    {
         OnBlueCountChanged?.Invoke();
+        Debug.Log("BlueCount Changed");
     }
 
     private void Update()
@@ -75,6 +51,9 @@ public class ScoreManager : NetworkBehaviour
                     break;
             }
         }
+
+        if (redCount != red) ChangeRedCountUI();
+        if (blueCount != blue) ChangeBlueCountUI();
 
         totalCount = total;
         redCount = red;
