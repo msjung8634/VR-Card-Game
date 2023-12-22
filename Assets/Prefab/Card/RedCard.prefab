@@ -149,6 +149,7 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
+  rigidbody: {fileID: 0}
 --- !u!114 &4554561294953304356
 MonoBehaviour:
   m_ObjectHideFlags: 0

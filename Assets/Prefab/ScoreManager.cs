@@ -14,21 +14,11 @@ public class ScoreManager : NetworkBehaviour
 
     [SyncVar]
     public uint redCount = 0;
+    void ChangeRedCountUI() => OnRedCountChanged?.Invoke();
 
     [SyncVar]
     public uint blueCount = 0;
-
-    void ChangeRedCountUI()
-    {
-        OnRedCountChanged?.Invoke();
-        Debug.Log("RedCount Changed");
-    }
-
-    void ChangeBlueCountUI()
-    {
-        OnBlueCountChanged?.Invoke();
-        Debug.Log("BlueCount Changed");
-    }
+    void ChangeBlueCountUI() => OnBlueCountChanged?.Invoke();
 
     private void Update()
     {

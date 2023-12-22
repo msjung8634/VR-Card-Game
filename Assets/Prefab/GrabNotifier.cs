@@ -17,6 +17,7 @@ public class GrabNotifier : MonoBehaviour
     }
 
     public NetworkGrabHandler networkGrabHandler;
+    public Rigidbody networkRigidbody;
     public void OnSelectEntered()
     {
         xrDirectInteractor.GetValidTargets(validTargets);
@@ -27,9 +28,10 @@ public class GrabNotifier : MonoBehaviour
             var grabbedCard = grabInteractable.gameObject;
             var netID = grabbedCard.GetComponent<NetworkIdentity>().netId;
 
-            Debug.Log($"{grabInteractable.gameObject}<color=cyan>[ID:{netID}] on {gameObject.name}</color>");
+            Debug.Log($"<color=cyan>Card[netID:{netID}] on {gameObject.name}</color>");
 
             networkGrabHandler = grabbedCard.GetComponent<NetworkGrabHandler>();
+            networkRigidbody = grabbedCard.GetComponent<Rigidbody>();
         }
 
         isGrabbing = true;
@@ -38,7 +40,14 @@ public class GrabNotifier : MonoBehaviour
     public void OnSelectExited()
     {
         isGrabbing = false;
-        
+
+        var velocity = networkRigidbody.velocity;
+        var angularVelocity = networkRigidbody.angularVelocity;
+        var inertiaTensor = networkRigidbody.inertiaTensor;
+        var inertiaTensorRotation = networkRigidbody.inertiaTensorRotation;
+        var centerOfMass = networkRigidbody.centerOfMass;
+
+        networkGrabHandler.SyncRigidbody(false, velocity, angularVelocity, inertiaTensor, inertiaTensorRotation, centerOfMass);
         networkGrabHandler = null;
     }
 
@@ -51,7 +60,15 @@ public class GrabNotifier : MonoBehaviour
     {
         if (!isGrabbing) return;
 
-        //networkGrabHandler.SyncTransform(transform.position, transform.rotation);
-        networkGrabHandler.SyncTransform(networkGrabHandler.gameObject.transform.position, networkGrabHandler.gameObject.transform.rotation);
+        Vector3 grabbedCardPosition = networkGrabHandler.gameObject.transform.position;
+        Quaternion grabbedCardRotation = networkGrabHandler.gameObject.transform.rotation;
+        networkGrabHandler.SyncTransform(grabbedCardPosition, grabbedCardRotation);
+
+        var velocity = networkRigidbody.velocity;
+        var angularVelocity = networkRigidbody.angularVelocity;
+        var inertiaTensor = networkRigidbody.inertiaTensor;
+        var inertiaTensorRotation = networkRigidbody.inertiaTensorRotation;
+        var centerOfMass = networkRigidbody.centerOfMass;
+        networkGrabHandler.SyncRigidbody(true, velocity, angularVelocity, inertiaTensor, inertiaTensorRotation, centerOfMass);
     }
 }

@@ -1,16 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
-using Mirror;
 
-public enum ScoreType {
-    None = 0,
-    Red = 1,
-    Blue = 2,
-}
-
-public class UIOnScoreChanged : MonoBehaviour
+public class UIOnTimeChanged : MonoBehaviour
 {
     RectTransform rectTransform;
     Vector3 originPos;
@@ -19,7 +11,7 @@ public class UIOnScoreChanged : MonoBehaviour
     public float distance = 100f;
     public float moveTime = 1f;
     public AnimationCurve speedOverTime;
-    
+
     private void Awake()
     {
         TryGetComponent(out rectTransform);
@@ -29,7 +21,7 @@ public class UIOnScoreChanged : MonoBehaviour
     {
         originPos = rectTransform.anchoredPosition3D;
     }
-    
+
     private IEnumerator lastMove = null;
     public void MoveText()
     {

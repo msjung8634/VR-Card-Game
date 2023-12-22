@@ -6,14 +6,17 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     public ScoreManager scoreManager;
+    public TimeManager timeManager;
 
     public GameObject ready;
     public GameObject start;
     public GameObject redCount;
     public GameObject blueCount;
+    public GameObject remainTime;
 
     TextMeshProUGUI txtRedCountText;
     TextMeshProUGUI txtBlueCountText;
+    TextMeshProUGUI txtRemainTimeText;
 
     Canvas canvas;
 
@@ -21,9 +24,11 @@ public class UIManager : MonoBehaviour
     {
         TryGetComponent(out canvas);
         scoreManager = FindObjectOfType<ScoreManager>();
+        timeManager = FindObjectOfType<TimeManager>();
 
         txtRedCountText = redCount.GetComponent<TextMeshProUGUI>();
         txtBlueCountText = blueCount.GetComponent<TextMeshProUGUI>();
+        txtRemainTimeText = remainTime.GetComponent<TextMeshProUGUI>();
     }
 
     private void Start()
@@ -33,8 +38,18 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        txtRedCountText.text = $"{scoreManager.redCount:##}";
-        txtBlueCountText.text = $"{scoreManager.blueCount:##}";
+        txtRedCountText.text = $"{scoreManager.redCount:#0}";
+        txtBlueCountText.text = $"{scoreManager.blueCount:#0}";
+
+        if (timeManager.remainSeconds > 0)
+        {
+            txtRemainTimeText.text = $"{timeManager.remainSeconds:#0}";
+        }
+        else
+        {
+            txtRemainTimeText.color = Color.magenta;
+            txtRemainTimeText.text = $"STOP";
+        }
     }
 
     public void ShowReady()
