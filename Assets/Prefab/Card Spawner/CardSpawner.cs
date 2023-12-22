@@ -9,7 +9,7 @@ public class CardSpawner : NetworkBehaviour
 
     public MeshRenderer spawnerMesh;
 
-    [SyncVar(hook = "ChangeMaterial")]
+    [SyncVar(hook = nameof(ChangeMaterial))]
     public bool isRed = false;
 
     private void ChangeMaterial(bool _, bool newFlag)
@@ -92,7 +92,7 @@ public class CardSpawner : NetworkBehaviour
             yield return new WaitForSeconds(spawnInterval);
             currentSpawnCount++;
 
-            isRed = currentSpawnCount % 2 == 0 ? false : true;
+            isRed = currentSpawnCount % 2 == 0 ? true : false;
 
             var cardObj = isRed ? redCardPrefab : blueCardPrefab;
             GameObject card = Instantiate(cardObj, transform.position, cardObj.transform.rotation);

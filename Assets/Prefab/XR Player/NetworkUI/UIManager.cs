@@ -43,11 +43,13 @@ public class UIManager : MonoBehaviour
 
         if (timeManager.remainSeconds > 0)
         {
+            if (timeManager.remainSeconds <= 30)
+                txtRemainTimeText.color = Color.magenta;
+
             txtRemainTimeText.text = $"{timeManager.remainSeconds:#0}";
         }
         else
         {
-            txtRemainTimeText.color = Color.magenta;
             txtRemainTimeText.text = $"STOP";
         }
     }

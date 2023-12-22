@@ -104,14 +104,14 @@ MonoBehaviour:
   isRed: 0
   redCardPrefab: {fileID: 4554561294953304353, guid: d6500433213f5784ab5e80f18b01010c, type: 3}
   blueCardPrefab: {fileID: 4554561294953304353, guid: b07d575854ee5654fbd36bad92b0407d, type: 3}
-  red: {fileID: 2100000, guid: 2ed2fad9913ca394ca722ba4f4858e2b, type: 2}
-  blue: {fileID: 2100000, guid: 2d3ed79ac91b3364e94a6256e7bb1bb3, type: 2}
+  red: {fileID: 2100000, guid: 2d3ed79ac91b3364e94a6256e7bb1bb3, type: 2}
+  blue: {fileID: 2100000, guid: 2ed2fad9913ca394ca722ba4f4858e2b, type: 2}
   roundTable: {fileID: 0}
   targetPos: {x: 0, y: 0, z: 0}
   distanceThreshold: 1
   moveSpeed: 5
-  spawnInterval: 2
-  maxSpawnCount: 10
+  spawnInterval: 1
+  maxSpawnCount: 25
   currentSpawnCount: 0
 --- !u!114 &109357448154621694
 MonoBehaviour:
